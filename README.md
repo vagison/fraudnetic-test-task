@@ -86,7 +86,7 @@ You can run it with the following commands:
 
 You must pass eventName and browserHash as arguments. For example:
 
-    npm run dev:send-event yourEventName yourBrowserHash.
+    npm run dev:send-event yourEventName yourBrowserHash
 
 
 ```shared``` - contains shared modules and utilities that are used across different parts of the project:
