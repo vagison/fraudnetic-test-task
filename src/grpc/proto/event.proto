@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package event;
+
+service EventService {
+  rpc sendEvent (EventRequest) returns (EventResponse);
+}
+
+message EventRequest {
+  string eventName = 1;
+  string browserHash = 2;
+}
+
+message EventResponse {
+  string message = 1;
+  Event event = 2;
+}
+
+message Event {
+  int32 id = 1;
+  string eventName = 2;
+  string browserHash = 3;
+  string createdAt = 4;
+}

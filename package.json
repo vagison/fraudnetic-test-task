@@ -1,0 +1,42 @@
+{
+  "name": "fraudnetic-test-task",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.X"
+  },
+  "scripts": {
+    "dev:api": "nodemon --exec babel-node ./src/api/app.js",
+    "dev:grpc": "nodemon --exec babel-node ./src/grpc/server.js",
+    "dev:send-event": "npx babel-node ./src/scripts/sendEvent.js",
+    "start:api": "node ./dist/api/app.js",
+    "start:grpc": "node ./dist/grpc/server.js",
+    "start:send-event": "node ./dist/scripts/sendEvent.js",
+    "build": "npm run clean && babel ./src/api --out-dir dist/api --copy-files && babel ./src/grpc --out-dir dist/grpc --copy-files && babel ./src/shared --out-dir dist/shared --copy-files && babel ./src/scripts --out-dir dist/scripts --copy-files",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Node.js+Fastify+gRPC+PostgreSQL test task for FraudNetic",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.11.2",
+    "@grpc/proto-loader": "^0.7.13",
+    "consola": "^3.2.3",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "pg": "^8.12.0",
+    "pino": "^9.4.0",
+    "pino-pretty": "^11.2.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^3.1.4"
+  }
+}
