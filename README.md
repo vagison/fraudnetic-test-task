@@ -44,11 +44,11 @@ To run the project, start the REST API and the gRPC server simultaneously follow
     ```npm run clean```
 
 
-## Project description
+## Project Description
 The project integrates a Fastify-based REST API for client-facing interactions, gRPC for efficient inter-service communication and PostgreSQL for data storage and retrieval.
 
 
-## Project structure
+## Project Structure
 The root directory of the project contains the ```src``` folder, where the entire codebase is located.
 
 Inside the ```src``` folder, there are several subfolders, each with its own structure and description:
@@ -108,7 +108,7 @@ There are some files in the root directory apart from the ```src``` folder:
 * README.md - contains the instruction you are currently reading :D
 
 
-## Using API endpoints
+## Using API Endpoints
 To use the endpoints, you can visit the Postman URL below and then either fork or download the collection:
 
 https://www.postman.com/grey-equinox-5383/fraudnetic/collection/qyhw7uo/fastify-api
@@ -116,3 +116,6 @@ https://www.postman.com/grey-equinox-5383/fraudnetic/collection/qyhw7uo/fastify-
 The request names are self-explanatory, and any additional information can be found within the requests themselves.
 
 Note that the local variables "API_URL" and "API_VERSION" should be manually set in your Postman client according to your usage (defaults are http://localhost:3000 and v1). Other variables are set during API calls.
+
+## Using Scripts
+For manual invocation of the gRPC client, please refer to the "Project Structure" section of this README. The description of the "scripts" folder provides usage instructions for the scripts.
