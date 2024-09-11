@@ -81,15 +81,15 @@ Inside the ```src``` folder, there are several subfolders, each with its own str
 
 You can run it with the following commands:
 
-    ```npm run dev:send-event``` (for development mode) or ```npm run start:send-event``` (for the compiled version)
+    npm run dev:send-event (for development mode) or npm run start:send-event (for the compiled version)
 
 
 You must pass eventName and browserHash as arguments. For example:
 
-    ```npm run dev:send-event yourEventName yourBrowserHash```.
+    npm run dev:send-event yourEventName yourBrowserHash.
 
 
-```shared``` contains shared modules and utilities that are used across different parts of the project:
+```shared``` - contains shared modules and utilities that are used across different parts of the project:
 * configs: stores configuration settings shared across the project.
 * db: handles database-related logic.
   - queries: contains functions to perform database queries.
